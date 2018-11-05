@@ -1,0 +1,9 @@
+C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\StudentRegistration\bin\Debug\StudentRegistration.exe.config
+C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\StudentRegistration\bin\Debug\StudentRegistration.exe
+C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\StudentRegistration\bin\Debug\StudentRegistration.pdb
+C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\StudentRegistration\obj\Debug\StudentRegistration.csprojResolveAssemblyReference.cache
+C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\StudentRegistration\obj\Debug\StudentRegistration.csproj.CoreCompileInputs.cache
+C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\StudentRegistration\obj\Debug\StudentRegistration.exe
+C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\StudentRegistration\obj\Debug\StudentRegistration.pdb
+C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\StudentRegistration\bin\Debug\CommonComponents.dll
+C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\StudentRegistration\bin\Debug\CommonComponents.pdb
