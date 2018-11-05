@@ -12,9 +12,11 @@ namespace StudentRegistration
 {
     class CourseRepository
     {
+
+        //Insert a new course into the the database.
         public void AddNewCourse(string courseName, int minimumGrade)
         {
-            using (SqlConnection connection = new SqlConnection(Helper.ConnectionValue("StudentRegistrationDB")))
+            using (SqlConnection connection = new SqlConnection(Helper.ConnectionValue("StudentDB")))
             {
                 using (SqlCommand command = new SqlCommand())
                 {
@@ -42,10 +44,12 @@ namespace StudentRegistration
             }
         }
 
+
+        //Add the student to the course 
         public void AddStudentToCourse(int studentID, int courseID) {
 
 
-            using (SqlConnection connection = new SqlConnection(Helper.ConnectionValue("StudentRegistrationDB")))
+            using (SqlConnection connection = new SqlConnection(Helper.ConnectionValue("StudentDB")))
             {
                 using (SqlCommand command = new SqlCommand())
                 {
@@ -80,16 +84,16 @@ namespace StudentRegistration
         {
             bool meetsCriteria = true;
 
-            using (SqlConnection connection = new SqlConnection(Helper.ConnectionValue("StudentRegistrationDB")))
+            using (SqlConnection connection = new SqlConnection(Helper.ConnectionValue("StudentDB")))
             {
                 using (SqlCommand command = new SqlCommand())
                 {
 
                     command.Connection = connection;
                     command.CommandType = CommandType.Text;
-                    command.CommandText = "SELECT  1 id FROM UsersLogin where username = '@user1';";
+                    command.CommandText = "SELECT * FROM Grades where StudentId = '@StudentId';";
+                    command.Parameters.AddWithValue("@StudentId", studentID);
 
-              
                 }
             }
 

@@ -4,3 +4,8 @@ C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\Commo
 C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\CommonComponents\obj\Debug\CommonComponents.csproj.CoreCompileInputs.cache
 C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\CommonComponents\obj\Debug\CommonComponents.dll
 C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\CommonComponents\obj\Debug\CommonComponents.pdb
+C:\Users\PC\Documents\GitHub\StudentManagement\CommonComponents\bin\Debug\CommonComponents.dll
+C:\Users\PC\Documents\GitHub\StudentManagement\CommonComponents\bin\Debug\CommonComponents.pdb
+C:\Users\PC\Documents\GitHub\StudentManagement\CommonComponents\obj\Debug\CommonComponents.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\GitHub\StudentManagement\CommonComponents\obj\Debug\CommonComponents.dll
+C:\Users\PC\Documents\GitHub\StudentManagement\CommonComponents\obj\Debug\CommonComponents.pdb

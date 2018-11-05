@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRegistration", "Stud
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRegistration.Test", "StudentRegistration.Test\StudentRegistration.Test.csproj", "{188D30D8-EE97-4383-82E2-C4602CC3EF92}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "StudentRegistrationDB", "StudentRegistrationDB\StudentRegistrationDB.sqlproj", "{2F190EC3-0991-452B-8482-FD3CA9682FDD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonComponents", "CommonComponents\CommonComponents.csproj", "{91DD77CC-2F19-46FD-9B41-1258B2F09B90}"
 EndProject
 Global
@@ -25,12 +23,6 @@ Global
 		{188D30D8-EE97-4383-82E2-C4602CC3EF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{188D30D8-EE97-4383-82E2-C4602CC3EF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{188D30D8-EE97-4383-82E2-C4602CC3EF92}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F190EC3-0991-452B-8482-FD3CA9682FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F190EC3-0991-452B-8482-FD3CA9682FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F190EC3-0991-452B-8482-FD3CA9682FDD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{2F190EC3-0991-452B-8482-FD3CA9682FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F190EC3-0991-452B-8482-FD3CA9682FDD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F190EC3-0991-452B-8482-FD3CA9682FDD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{91DD77CC-2F19-46FD-9B41-1258B2F09B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{91DD77CC-2F19-46FD-9B41-1258B2F09B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91DD77CC-2F19-46FD-9B41-1258B2F09B90}.Release|Any CPU.ActiveCfg = Release|Any CPU

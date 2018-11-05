@@ -14,7 +14,7 @@ namespace StudentRegistration
         //Insert a student into the student database. Minimum requirements are firstname, lastname and address.
         public void AddStudent(string firstName, string lastName, string Address, string studentType)
         {
-            using (SqlConnection connection = new SqlConnection(Helper.ConnectionValue("StudentRegistrationDB")))
+            using (SqlConnection connection = new SqlConnection(Helper.ConnectionValue("StudentDB")))
             {
                 using (SqlCommand command = new SqlCommand())
                 {
@@ -25,6 +25,7 @@ namespace StudentRegistration
                     command.Parameters.AddWithValue("@LastName", lastName);
                     command.Parameters.AddWithValue("@Address", Address);
                     command.Parameters.AddWithValue("@StudentType", studentType);
+                 
                     try
                     {
                         connection.Open();
@@ -38,33 +39,7 @@ namespace StudentRegistration
 
             }
         }
-
-        public void UpdateGrade(int studentGrade)
-        {
-            using (SqlConnection connection = new SqlConnection(Helper.ConnectionValue("StudentRegistrationDB")))
-            {
-                using (SqlCommand command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "INSERT into Grades (StudentGrade) VALUES (@StudentGrade)";
-                    command.CommandType = CommandType.Text;
-                    command.Parameters.AddWithValue("@StudentGrade", studentGrade);
-                    try
-                    {
-                        connection.Open();
-                        int recordsAffected = command.ExecuteNonQuery();
-                    }
-                    catch (SqlException)
-                    {
-                     
-                    }
-                }
-
-
-
-            }
-
         }
-    }
 }
+
 

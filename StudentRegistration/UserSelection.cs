@@ -20,15 +20,16 @@ namespace StudentRegistration
         public void DisplayUserOptions() {
             //Displays the list of options to the user. Clears it at first to ensure all other text is kept
             // of the screen and not in the users face.
-            Console.Clear();
+            //Console.Clear();
             Console.WriteLine("Please select an option between 1-6");
             Console.WriteLine("1. Add a new student to the database");
             Console.WriteLine("2. Add a student to a course");
             Console.WriteLine("3. Add a course");
-            Console.WriteLine("4. View all students on each course");
-            Console.WriteLine("5. List all foreign students");
-            Console.WriteLine("6. List all PHD students");
-            Console.WriteLine("7. Exit Application");
+            Console.WriteLine("4. Update grades");
+            Console.WriteLine("5. View all students on each course");
+            Console.WriteLine("6. List all foreign students");
+            Console.WriteLine("7. List all PHD students");
+            Console.WriteLine("8. Exit Application");
 
         }
 
@@ -52,7 +53,6 @@ namespace StudentRegistration
                 var studentType = Console.ReadLine();
 
                 newStudent.AddStudent(firstName, lastName, address, studentType);
-                newStudent.UpdateGrade(55);
             }
             else if (userInput == "2")
             {
@@ -80,7 +80,27 @@ namespace StudentRegistration
                 newCourse.AddNewCourse(courseName, int.Parse(minimumGrade));
 
             }
-            else if (userInput == "7")
+            else if (userInput == "4")
+            {
+                var updateGrade = new GradeRepository();
+             
+                Console.WriteLine("Please enter the student ID");
+                var studentId = Console.ReadLine();
+
+                Console.WriteLine("Please enter thier grade");
+                var studentGrade = Console.ReadLine();
+
+                updateGrade.UpdateGrade(int.Parse(studentGrade), int.Parse(studentId));
+
+            }
+            else if (userInput == "5")
+            {
+                var studentDisplay = new StudentDisplay();
+
+                studentDisplay.displayStudent();
+
+            }
+            else if (userInput == "8")
             {
                 ExitApplication = true;
             }
