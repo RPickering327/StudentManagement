@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommonComponents;
 
 namespace StudentRegistration
 {
@@ -19,7 +20,21 @@ namespace StudentRegistration
 
                 //Get the users input and display/run the method required.
                 var userInput = Console.ReadLine();
-                UserSelection.UsersInput(userInput);
+
+
+                //Validate the user input on the selection screen is between 1-8 and is numeric
+                if (Validation.InvalidInputCheck(userInput) == false)
+                {
+
+                    Console.WriteLine(Validation.errorMessage);
+                }
+                else {
+
+                    Console.Clear();
+                    UserSelection.UsersInput(userInput);
+
+                }
+
 
             }
 

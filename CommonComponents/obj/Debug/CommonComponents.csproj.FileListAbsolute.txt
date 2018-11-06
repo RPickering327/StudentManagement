@@ -9,3 +9,4 @@ C:\Users\PC\Documents\GitHub\StudentManagement\CommonComponents\bin\Debug\Common
 C:\Users\PC\Documents\GitHub\StudentManagement\CommonComponents\obj\Debug\CommonComponents.csproj.CoreCompileInputs.cache
 C:\Users\PC\Documents\GitHub\StudentManagement\CommonComponents\obj\Debug\CommonComponents.dll
 C:\Users\PC\Documents\GitHub\StudentManagement\CommonComponents\obj\Debug\CommonComponents.pdb
+C:\Users\PC\Documents\GitHub\StudentManagement\CommonComponents\obj\Debug\CommonComponents.csprojAssemblyReference.cache
