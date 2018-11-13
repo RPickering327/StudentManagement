@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CommonComponents;
+using static CommonComponents.Validation;
 
 namespace StudentRegistration
 {
@@ -24,7 +24,8 @@ namespace StudentRegistration
             get { return _firstName; }
             set
             {
-                Validation.ValidNameCheck(value);
+                //Check if the name is characters only and is not null
+                ValidNameCheck(value);
                 _firstName = value;
             }
         }
@@ -34,7 +35,8 @@ namespace StudentRegistration
             get { return _lastName; }
             set
             {
-                Validation.ValidNameCheck(value);
+                //Check if the name is characters only and is not null
+                ValidNameCheck(value);
                 _lastName = value;
             }
         }
@@ -45,7 +47,8 @@ namespace StudentRegistration
             get { return _studentType; }
             set
             {
-                Validation.ValidStudentType(value);
+                //Ensure the type is either U, F OR P anything else is not accepted.
+                ValidStudentType(value);
                 _studentType = value;
             }
         }

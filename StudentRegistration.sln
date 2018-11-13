@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRegistration", "StudentRegistration\StudentRegistration.csproj", "{EF526400-D015-4C2A-8E16-9B7DAD192FC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRegistration.Test", "StudentRegistration.Test\StudentRegistration.Test.csproj", "{188D30D8-EE97-4383-82E2-C4602CC3EF92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRegistration.Test.Console", "StudentRegistration.Test\StudentRegistration.Test.Console.csproj", "{188D30D8-EE97-4383-82E2-C4602CC3EF92}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonComponents", "CommonComponents\CommonComponents.csproj", "{91DD77CC-2F19-46FD-9B41-1258B2F09B90}"
 EndProject

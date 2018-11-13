@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CommonComponents;
+﻿using CommonComponents;
+using System;
 
 namespace StudentRegistration
 {
@@ -11,6 +7,8 @@ namespace StudentRegistration
     {
         static void Main(string[] args)
         {
+            //Seperated the class I only wanted the main method to get the user input
+            //Displaying the options is left to other classes.
             var UserSelection = new UserSelection();
 
             while (UserSelection.ExitApplication == false)
@@ -28,7 +26,8 @@ namespace StudentRegistration
 
                     Console.WriteLine(Validation.errorMessage);
                 }
-                else {
+                else
+                {
 
                     Console.Clear();
                     UserSelection.UsersInput(userInput);

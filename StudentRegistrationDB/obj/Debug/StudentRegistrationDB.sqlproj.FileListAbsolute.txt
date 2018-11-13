@@ -1,5 +1,0 @@
-C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.dacpac
-C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.dll
-C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.pdb
-C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.dll
-C:\Users\Richard\Documents\Visual Studio 2017\Projects\StudentRegistration\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.pdb

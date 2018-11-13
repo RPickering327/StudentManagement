@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using static System.Console; 
+
 
 namespace StudentRegistration
 {
@@ -48,56 +50,79 @@ namespace StudentRegistration
         //Add the student to the course 
         public void AddStudentToCourse(int studentID, int courseID) {
 
-
-            using (SqlConnection connection = new SqlConnection(Helper.ConnectionValue("StudentDB")))
+            if (Validation.ValidationSuccessfully == true)
             {
-                using (SqlCommand command = new SqlCommand())
+                using (SqlConnection connection = new SqlConnection(Helper.ConnectionValue("StudentDB")))
                 {
-                    command.Connection = connection;
-                    command.CommandType = CommandType.Text;
-                    command.CommandText = "INSERT into EnrolledStudents (StudentId, CourseId) VALUES (@StudentId, @CourseId)";
-                    command.Parameters.AddWithValue("@CourseId", courseID);
-                    command.Parameters.AddWithValue("@StudentId", studentID);
-                    try
+                    using (SqlCommand command = new SqlCommand())
                     {
-                        connection.Open();
-                        int recordsAffected = command.ExecuteNonQuery();
+                        command.Connection = connection;
+                        command.CommandType = CommandType.Text;
+                        command.CommandText = "INSERT into EnrolledStudents (StudentId, CourseId) VALUES (@StudentId, @CourseId)";
+                        command.Parameters.AddWithValue("@StudentId", studentID);
+                        command.Parameters.AddWithValue("@CourseId", courseID);
+              
+                        try
+                        {
+                            connection.Open();
+                            int recordsAffected = command.ExecuteNonQuery();
+                        }
+                        catch (SqlException)
+                        {
+                            WriteLine("Either the course or the student are not in the DB.");
+                            int milliseconds = 2000;
+                            Thread.Sleep(milliseconds);
+                        }
+                        finally
+                        {
+                            connection.Close();
+                        }
                     }
-                    catch (SqlException)
-                    {
-                        Console.WriteLine("Either the course or the student are not in the DB.");
-                        int milliseconds = 2000;
-                        Thread.Sleep(milliseconds);
-                    }
-                    finally
-                    {
-                        connection.Close();
-                    }
-                }
 
+
+                }
 
             }
 
         }
 
-        public bool CheckGrade(int studentGrade, int studentID)
+        //Check the inputted grade for the student is greater than the course minimum if not return false so the user is not inserted into the database.
+        public bool CheckGrade(int courseId, int studentID)
         {
-            bool meetsCriteria = true;
-
             using (SqlConnection connection = new SqlConnection(Helper.ConnectionValue("StudentDB")))
             {
                 using (SqlCommand command = new SqlCommand())
                 {
-
                     command.Connection = connection;
-                    command.CommandType = CommandType.Text;
-                    command.CommandText = "SELECT * FROM Grades where StudentId = '@StudentId';";
-                    command.Parameters.AddWithValue("@StudentId", studentID);
+                    command.CommandText = $"SELECT g.*, c.*, s.* FROM Grades g, Student s, Courses c WHERE {studentID} = g.StudentId" +
+                                          $" AND s.StudentId = {studentID}" +
+                                          $" AND c.CourseId = {courseId}" +
+                                          " AND c.MinimumGrade < g.StudentGrade;";
+                    try
+                    {
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        int numberOfRows = reader.Cast<object>().Count();
+
+                        if (!(numberOfRows == 1))
+                        {
+                            Validation.ValidationSuccessfully = false;
+                            WriteLine("Didn't meet the minimum grades to join this course.");
+                        }
+
+                        reader.Close();
+                    }
+                    catch
+                    {
+
+                    }
 
                 }
             }
 
-                    return meetsCriteria;
+            return Validation.ValidationSuccessfully;
+
         }
 
     }
