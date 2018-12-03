@@ -1,7 +1,4 @@
 # StudentManagement
-
---UNIT TESTS are currently not done niether is the web application. 
-
 - A console and ASP.NET web application
 
 - Functionalities (Console Application)
